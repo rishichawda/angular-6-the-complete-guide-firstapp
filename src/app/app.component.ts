@@ -5,6 +5,12 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'app';
+  server_elements = [
+    { type: 'server', name: 'test server', details: 'this is a test server' },
+    { type: 'server', name: 'test server', details: 'this is a test server' }
+  ];
+
+
 }

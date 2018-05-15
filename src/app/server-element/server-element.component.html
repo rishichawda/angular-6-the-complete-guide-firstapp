@@ -1,0 +1,16 @@
+
+
+      <a href="#" class="list-group-item list-group-item-action mt-2">
+          <div class="card-header">
+            {{ element.name }}
+          </div>
+          <div class="card-body">
+            <blockquote *ngIf="element.type === 'server'" style="color: red" class="blockquote mb-0">
+              <p> {{ element.details }} </p>
+            </blockquote>
+            <blockquote *ngIf="element.type === 'blueprint'" style="color: blue" class="blockquote mb-0">
+              <p> {{ element.details }} </p>
+            </blockquote>
+        </div>
+      </a>
+
