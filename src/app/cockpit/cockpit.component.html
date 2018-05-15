@@ -1,11 +1,17 @@
-<label for="name" class="mr-2">Server Name</label>
-<input type="text" (input)="on_update_server_name($event)" id="name"><br><br>
-<label for="detail" class="mr-2">Server Detail</label>
-  <input type="text" [(ngModel)]="server_name" id="detail">
-  <p class="mt-2">{{ server_name }}</p>
-  <button class="btn btn-success" [disabled]="!allow_new_servers" (click)="on_create_server()" >
-    Add Server
-  </button>
-  <button class="btn btn-primary ml-2" (click)="on_create_blueprint()" >
-    Add Blueprint
-  </button>
+<div class="row">
+  <div class="col-sm-12">
+    <label for="name" class="mr-2">Server Name</label>
+    <input type="text" [(ngModel)]="new_servername" id="name">
+    <br>
+    <br>
+    <label for="detail" class="mr-2">Server Content</label>
+    <input type="text" [(ngModel)]="new_servercontent" id="detail">
+  </div>
+</div>
+<br>
+<button class="btn btn-success" [disabled]="!allow_new_servers" (click)="on_create_server()">
+  Add Server
+</button>
+<button class="btn btn-primary ml-2" (click)="on_create_blueprint()">
+  Add Blueprint
+</button>
