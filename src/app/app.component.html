@@ -12,7 +12,7 @@
         <div class="list-group">
       <!-- <app-server-element *ngFor="let element of server_elements" [server_element]="element"> -->
       <app-server-element *ngFor="let element of server_elements" [name]="element.name">
-            <div class="card-body">
+            <div class="card-body" #contentparagraph>
               <blockquote *ngIf="element.type === 'server'" style="color: red" class="blockquote mb-0">
                 <p> {{ element.content }} </p>
               </blockquote>
