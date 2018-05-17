@@ -19,7 +19,7 @@ export class AppComponent {
       content: server_data.server_content
     });
   }
-  
+
   on_blueprint_added(server_data: {server_name: string, server_content: string}) {
     this.server_elements.push({
       type: 'blueprint',
@@ -28,4 +28,11 @@ export class AppComponent {
     });
   }
 
+  on_change_first() {
+    this.server_elements[0].name = 'this element name was changed!';
+  }
+
+  on_destroy_first(){
+    this.server_elements.splice(0,1);
+  }
 }

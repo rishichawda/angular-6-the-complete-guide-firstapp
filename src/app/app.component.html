@@ -4,11 +4,23 @@
   (server_created)="on_server_added($event)" 
   (bp_created)="on_blueprint_added($event)" 
   ></app-cockpit>
+  <button class="btn btn-secondary ml-2" (click)="on_change_first()">Change first element</button>
+  <button class="btn btn-danger ml-2" (click)="on_destroy_first()">Delete first element</button>
   <hr>
   <div class="row mt-2">
     <div class="col-sm-12">
         <div class="list-group">
-      <app-server-element *ngFor="let element of server_elements" [server_element]="element"></app-server-element>
+      <!-- <app-server-element *ngFor="let element of server_elements" [server_element]="element"> -->
+      <app-server-element *ngFor="let element of server_elements" [name]="element.name">
+            <div class="card-body">
+              <blockquote *ngIf="element.type === 'server'" style="color: red" class="blockquote mb-0">
+                <p> {{ element.content }} </p>
+              </blockquote>
+              <blockquote *ngIf="element.type === 'blueprint'" style="color: blue" class="blockquote mb-0">
+                <p> {{ element.content }} </p>
+              </blockquote>
+          </div>
+      </app-server-element>
       <!-- <app-servers></app-servers> -->
       <!-- <div app-servers></div> -->
       <!-- <div class="app-servers"></div> -->
