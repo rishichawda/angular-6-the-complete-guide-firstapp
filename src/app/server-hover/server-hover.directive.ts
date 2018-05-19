@@ -12,7 +12,7 @@ import { OnInit,
 })
 export class ServerHoverDirective implements OnInit {
 
-    @Input() default_color = 'transparent';
+    @Input('appServerHoverDirective') default_color = 'transparent';
     @Input() highlight_color = 'rgba(0,0,0,0.2)';
     // @HostBinding('style.backgroundColor') backgroundcolor = 'transparent';
     @HostBinding('style.backgroundColor') backgroundcolor: string;
