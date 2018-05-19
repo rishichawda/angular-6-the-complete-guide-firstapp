@@ -5,12 +5,12 @@ import {
   ViewEncapsulation, 
   OnChanges, 
   SimpleChanges, 
-  DoCheck, 
-  AfterContentInit, 
-  AfterContentChecked, 
-  AfterViewInit, 
-  AfterViewChecked, 
-  OnDestroy, 
+  DoCheck,
+  AfterContentInit,
+  AfterContentChecked,
+  AfterViewInit,
+  AfterViewChecked,
+  OnDestroy,
   ViewChild,
   ElementRef,
   ContentChild
@@ -22,14 +22,14 @@ import {
   styleUrls: ['./server-element.component.css'],
   encapsulation: ViewEncapsulation.Emulated // Applied by default, other values - None, Native
 })
-export class ServerElementComponent implements 
-  OnInit, 
-  OnChanges, 
-  DoCheck, 
-  AfterContentInit, 
-  AfterContentChecked, 
-  AfterViewInit, 
-  AfterViewChecked, 
+export class ServerElementComponent implements
+  OnInit,
+  OnChanges,
+  DoCheck,
+  AfterContentInit,
+  AfterContentChecked,
+  AfterViewInit,
+  AfterViewChecked,
   OnDestroy {
 
   // @Input('server_element') element: {type: string, name: string, details: string};
@@ -56,25 +56,25 @@ export class ServerElementComponent implements
     console.log('docheck called');
   }
 
-  ngAfterContentInit(){
+  ngAfterContentInit() {
     console.log('aftercontentinit called');
-    console.log('Content text is : '+this.paragraph.nativeElement.textContent);
+    console.log('Content text is : ' + this.paragraph.nativeElement.textContent);
   }
 
-  ngAfterContentChecked(){
+  ngAfterContentChecked() {
     console.log('aftercontentchecked called');
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     console.log('afterviewinit called');
-    console.log('Heading text is : '+this.header.nativeElement.textContent);
+    console.log('Heading text is : ' + this.header.nativeElement.textContent);
   }
 
-  ngAfterViewChecked(){
+  ngAfterViewChecked() {
     console.log('afterviewchecked called');
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     console.log('ondestroy called');
   }
 }

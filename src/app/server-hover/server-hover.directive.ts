@@ -3,7 +3,8 @@ import { OnInit,
      ElementRef,
      Renderer2,
      HostBinding,
-     HostListener
+     HostListener,
+     Input
     } from '@angular/core';
 
 @Directive({
@@ -11,21 +12,25 @@ import { OnInit,
 })
 export class ServerHoverDirective implements OnInit {
 
-    @HostBinding('style.backgroundColor') backgroundcolor = 'transparent';
+    @Input() default_color = 'transparent';
+    @Input() highlight_color = 'rgba(0,0,0,0.2)';
+    // @HostBinding('style.backgroundColor') backgroundcolor = 'transparent';
+    @HostBinding('style.backgroundColor') backgroundcolor: string;
 
     constructor( private elRef: ElementRef, private renderer: Renderer2) {}
 
     ngOnInit() {
+        this.backgroundcolor = this.default_color;
         // this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'rgba(0,0,0,0.2)');
     }
 
-    @HostListener('mouseenter') mousehover() {
+    @HostListener('mouseenter') mousehover(event_data: Event) {
         // this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'rgba(0,0,0,0.2)');
-        this.backgroundcolor = 'rgba(0,0,0,0.2)';
+        this.backgroundcolor = this.highlight_color;
     }
 
-    @HostListener('mouseleave') mouseleave() {
+    @HostListener('mouseleave') mouseleave(event_data: Event) {
         // this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'rgba(0,0,0,0)');
-        this.backgroundcolor = 'transparent';
+        this.backgroundcolor = this.default_color;
     }
 }
