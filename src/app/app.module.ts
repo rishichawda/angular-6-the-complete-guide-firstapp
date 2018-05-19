@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 
 import { ServerElementComponent } from './server-element/server-element.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
+import { ServerHoverDirective } from './server-hover/server-hover.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerElementComponent,
-    CockpitComponent
+    CockpitComponent,
+    ServerHoverDirective
   ],
   imports: [
     BrowserModule,
