@@ -1,10 +1,10 @@
-import { 
-  Component, 
-  OnInit, 
-  Input, 
-  ViewEncapsulation, 
-  OnChanges, 
-  SimpleChanges, 
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewEncapsulation,
+  OnChanges,
+  SimpleChanges,
   DoCheck,
   AfterContentInit,
   AfterContentChecked,
