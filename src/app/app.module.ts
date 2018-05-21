@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AccountListComponent } from './account-list/account-list.component';
 import { AccountInputComponent } from './account-input/account-input.component';
 import { AccountService } from './shared/account-service.service';
+import { LoggingService } from './shared/logging.service';
 
 // import { ServerElementComponent } from './server-element/server-element.component';
 // import { CockpitComponent } from './cockpit/cockpit.component';
@@ -25,7 +26,7 @@ import { AccountService } from './shared/account-service.service';
     FormsModule,
     HttpModule
   ],
-  providers: [AccountService],
+  providers: [AccountService, LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

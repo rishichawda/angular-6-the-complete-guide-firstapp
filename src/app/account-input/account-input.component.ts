@@ -10,7 +10,7 @@ import { AccountService } from '../shared/account-service.service';
 })
 export class AccountInputComponent implements OnInit {
 
-  constructor(private loggin_service: LoggingService, private account_service: AccountService) { }
+  constructor(private account_service: AccountService) { }
 
   ngOnInit() {
   }
