@@ -3,23 +3,24 @@
     <div class="col-md-12">
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Home</a>
+          <a class="nav-link active" href="">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Servers</a>
+          <a class="nav-link" href="servers">Servers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Users</a>
+          <a class="nav-link" href="users">Users</a>
         </li>
       </ul>
     </div>
   </div>
   <div class="row mt-4 p-2">
     <div class="col-md-12">
-      <app-home></app-home>
+      <router-outlet></router-outlet>
+      <!-- <app-home></app-home> -->
     </div>
   </div>
-  <div class="row mt-4 p-4 bg-light">
+  <!-- <div class="row mt-4 p-4 bg-light">
     <div class="col-md-12 card p-4">
       <p class="card-header-pills ml-2">Users</p>
       <app-users></app-users>
@@ -30,5 +31,5 @@
         <p class="card-header-pills ml-2">Servers</p>
       <app-servers></app-servers>
     </div>
-  </div>
+  </div> -->
 </div>
