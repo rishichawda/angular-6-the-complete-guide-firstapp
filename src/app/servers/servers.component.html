@@ -1,18 +1,15 @@
-<div class="row">
-  <div class="col-xs-12 col-sm-4">
+<div class="row mt-4 p-4 bg-light">
+  <div class="col-md-6 card p-4">
+    <p class="card-header-pills ml-2">Servers</p>
     <div class="list-group">
-      <a
-        href="#"
-        class="list-group-item mb-1"
-        *ngFor="let server of servers">
+      <a href="#" class="list-group-item mb-1" *ngFor="let server of servers">
         {{ server.name }}
       </a>
     </div>
   </div>
-  <div class="col-sm-4">
+  <div class="col-md-6">
     <app-edit-server></app-edit-server>
     <hr>
     <app-server></app-server>
   </div>
 </div>
-
