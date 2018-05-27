@@ -1,6 +1,13 @@
 <div class="row mt-4 p-4 bg-light">
   <div class="col-md-6 card p-4">
-    <p class="card-header-pills ml-2">Servers</p>
+    <div class="row p-2">
+      <div class="col-sm-6 p-2">
+        <p class="card-header-pills ml-2">Servers</p>
+      </div>
+      <div class="col-sm-6 text-sm-right">
+        <button type="button" class="btn btn-primary my-2" (click)="on_reload_page()">Reload</button>
+      </div>
+    </div>
     <div class="list-group">
       <a href="#" class="list-group-item mb-1" *ngFor="let server of servers">
         {{ server.name }}
