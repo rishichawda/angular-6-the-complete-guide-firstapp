@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="list-group">
-      <a href="#" class="list-group-item mb-1" *ngFor="let server of servers">
+      <a [routerLink]="['/servers',5,'edit']" [queryParams]="{allowEdits: 1}" fragment="loading" class="list-group-item mb-1" *ngFor="let server of servers">
         {{ server.name }}
       </a>
     </div>
