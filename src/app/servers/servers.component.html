@@ -9,15 +9,15 @@
       </div>
     </div>
     <div class="list-group">
-      <a [routerLink]="['/servers',server.id]" class="list-group-item mb-1" *ngFor="let server of servers">
+      <a [routerLink]="['/servers',server.id]" [queryParams]="{allowEdits: server.id%2==0 ? 1 : 0}" fragment="loading" class="list-group-item mb-1" *ngFor="let server of servers">
         {{ server.name }}
       </a>
     </div>
   </div>
   <div class="col-md-6">
     <router-outlet></router-outlet>
-    <!-- <app-edit-server></app-edit-server> -->
-    <!-- <hr> -->
-    <!-- <app-server></app-server> -->
+    <!-- <app-edit-server></app-edit-server>
+    <hr>
+    <app-server></app-server> -->
   </div>
 </div>
