@@ -44,5 +44,4 @@ export class EditServerComponent implements OnInit, CanComponentDeactivate {
       return true;
     }
   }
-
 }

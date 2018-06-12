@@ -15,12 +15,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.show_login = this.auth_service.logged_in;
-    this.auth_service.authEvent
-    .subscribe(
-      () => {
-        this.show_login = this.auth_service.logged_in;
-       }
-     );
   }
 
   on_load_servers(id: number) {

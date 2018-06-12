@@ -10,6 +10,8 @@ import { EditServerComponent } from './servers/edit-server/edit-server.component
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthGaurd } from './auth-gaurd.service';
 import { CanDeactivateGaurd } from './servers/edit-server/can-deactivate-gaurd.service';
+import { ErrorPageComponent } from './error-page/error-page.component';
+import { ServerResolver } from './servers/server/server-resolver.service';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -24,11 +26,12 @@ const appRoutes: Routes = [
         canActivateChild: [AuthGaurd],
         component: ServersComponent,
         children: [
-            { path: ':id', component: ServerComponent },
+            { path: ':id', component: ServerComponent, resolve: {server: ServerResolver} },
             { path: ':id/edit', component: EditServerComponent, canDeactivate: [CanDeactivateGaurd] }
         ]
     },
-    { path: 'errorPageNotFound', component: PageNotFoundComponent },
+    // { path: 'errorPageNotFound', component: PageNotFoundComponent },
+    { path: 'errorPageNotFound', component: ErrorPageComponent, data: {message: 'Page Not Found!'} },
     { path: '**', redirectTo: '/errorPageNotFound' }
   ];
 
